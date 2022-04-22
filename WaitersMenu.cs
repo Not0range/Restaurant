@@ -130,8 +130,6 @@ namespace Restaurant
             do
             {
                 birthStr = Program.ReadLine("Введите дату рождения официанта: ");
-                if (string.IsNullOrWhiteSpace(birthStr))
-                    break;
 
                 success = DateTime.TryParse(birthStr, out birthDate);
                 if (!success)
@@ -142,8 +140,6 @@ namespace Restaurant
             do
             {
                 hireStr = Program.ReadLine("Введите дату найма официанта: ");
-                if (string.IsNullOrWhiteSpace(hireStr))
-                    break;
 
                 success = DateTime.TryParse(hireStr, out hireDate);
                 if (!success)

@@ -133,8 +133,6 @@ namespace Restaurant
             do
             {
                 priceStr = Program.ReadLine("Введите стоимость блюда: ");
-                if (string.IsNullOrWhiteSpace(priceStr))
-                    break;
 
                 success = decimal.TryParse(priceStr, out price);
                 if (!success)

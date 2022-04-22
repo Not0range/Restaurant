@@ -146,8 +146,6 @@ namespace Restaurant
             do
             {
                 waiterStr = Program.ReadLine("Введите ID официанта: ");
-                if (string.IsNullOrWhiteSpace(waiterStr))
-                    break;
 
                 success = int.TryParse(waiterStr, out waiter) &&
                     Waiter.waiters.Any(t => t.id == waiter);
@@ -158,8 +156,6 @@ namespace Restaurant
             do
             {
                 dateStr = Program.ReadLine("Введите дату: ");
-                if (string.IsNullOrWhiteSpace(dateStr))
-                    break;
 
                 success = DateTime.TryParse(dateStr, out date);
                 if (!success)
@@ -184,8 +180,6 @@ namespace Restaurant
             do
             {
                 tipsStr = Program.ReadLine("Введите чаевые: ");
-                if (string.IsNullOrWhiteSpace(tipsStr))
-                    break;
 
                 success = decimal.TryParse(tipsStr, out tips);
                 if (!success)
