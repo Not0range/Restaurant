@@ -179,6 +179,7 @@ namespace Restaurant
                     cashPayment = false;
 
             } while (k.KeyChar != '1' && k.KeyChar != '2');
+            Console.WriteLine(cashPayment ? "наличный" : "безналичный");
 
             do
             {
@@ -277,15 +278,15 @@ namespace Restaurant
             ConsoleKeyInfo k;
             do
             {
-                k = Console.ReadKey();
+                k = Console.ReadKey(true);
                 if (k.KeyChar == '1')
                     cashPayment = true;
                 else if (k.KeyChar == '2')
                     cashPayment = false;
 
             } while (k.KeyChar != '1' && k.KeyChar != '2' && k.Key != ConsoleKey.Enter);
+            Console.WriteLine(cashPayment ? "наличный" : "безналичный");
 
-            Console.WriteLine();
             do
             {
                 tipsStr = Program.ReadLine($"Введите чаевые ({c.tips}): ", true);
